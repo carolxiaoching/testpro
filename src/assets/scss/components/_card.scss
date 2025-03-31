@@ -1,0 +1,71 @@
+// 一般卡片樣式
+
+.cardHedaer {
+  &:hover .cardImage {
+    transform: scale(1.05);
+  }
+}
+
+.cardCategory {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.cardCover {
+  height: 12.5rem;
+}
+
+.cardImage {
+  transition: all 0.3s ease-in-out;
+}
+
+.cardCollect {
+  position: absolute;
+  top: 12.5rem;
+  right: 0.5rem;
+  transform: translateY(-1.25rem);
+}
+
+.cardCollectBtn {
+  background: $light;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: darken($light, 10%);
+    color: $white;
+  }
+}
+
+.cardInfo {
+  background: rgba($gray-200, 0.5);
+}
+
+// 直式卡片樣式
+
+.cardVerticalCover {
+  min-width: 18rem;
+  min-height: 12rem;
+}
+
+.cardVerticalCollect {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.cardVerticalCollectBtn {
+  background: $light;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: darken($light, 10%);
+    color: $white;
+  }
+}
+
+.cardVerticalDelBtn {
+  background: $danger;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: lighten($danger, 10%);
+  }
+}

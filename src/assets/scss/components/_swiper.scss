@@ -1,0 +1,119 @@
+.homeBannerLink {
+  position: relative;
+  display: block;
+  height: 20rem;
+  &:hover {
+    color: $dark;
+    .homeBannerText {
+      background: rgba($light, 1);
+    }
+  }
+}
+
+.homeBannerImg {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0.25rem;
+  @include media-breakpoint-up(lg) {
+    margin: 2rem;
+  }
+}
+
+.homeBannerText {
+  max-width: 90%;
+  margin: 1rem;
+  padding: 1rem;
+  background: rgba($light, 0.8);
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+/* .swiper-slide-active 為 swiper 套件的 */
+.swiper-slide-active {
+  .homeBannerImg {
+    margin: 0;
+    background-color: transparent;
+  }
+}
+
+.homeBannerBtnPrev,
+.homeBannerBtnNext {
+  display: none;
+  position: absolute;
+  top: 50%;
+  padding: 0.5rem 0.75rem;
+  background: $light;
+  transform: translateY(-50%);
+  transition: color ease-in-out 0.3s;
+  border-radius: 50%;
+  color: $dark;
+  font-size: 2rem;
+  line-height: 2rem;
+  opacity: 0.8;
+  z-index: 999;
+  cursor: pointer;
+  &:hover {
+    background: $secondary;
+    color: $white;
+    opacity: 1;
+  }
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
+.homeBannerBtnPrev {
+  right: 90%;
+  @include media-breakpoint-up(lg) {
+    right: 70%;
+  }
+}
+
+.homeBannerBtnNext {
+  left: 90%;
+  @include media-breakpoint-up(lg) {
+    left: 70%;
+  }
+}
+
+.homeBannerPagination {
+  --swiper-pagination-bottom: -3.5rem;
+  position: absolute;
+  text-align: center;
+}
+
+.homeBannerBullet {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+  background: $dark;
+  transition: all ease-in-out 0.2s;
+  border-radius: 50%;
+  opacity: 0.2;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.homeBannerBulletActive {
+  width: 2rem;
+  background: $primary;
+  border-radius: 50rem;
+  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
+}

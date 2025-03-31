@@ -1,0 +1,80 @@
+.featureBg {
+  position: absolute;
+  bottom: -12rem;
+  left: 3rem;
+  width: 360px;
+  transform: rotate(20deg);
+}
+
+.featureSubtitle,
+.categoriesSubtitle {
+  max-width: 50rem;
+}
+
+.featureImg {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.featureContent {
+  max-width: 19rem;
+}
+
+.recipesSectionBg {
+  position: absolute;
+  bottom: -10rem;
+  right: 3rem;
+  width: 320px;
+  transform: rotate(-20deg);
+}
+
+.categoryTagBg {
+  position: absolute;
+  bottom: -10rem;
+  left: 3rem;
+  width: 360px;
+  transform: rotate(20deg);
+}
+
+.categoryBadge {
+  &:hover {
+    .categoryBadgeImage {
+      background-color: darken($tertiary, 8%);
+    }
+    span {
+      color: darken($tertiary, 8%);
+    }
+  }
+}
+.categoryBadgeImage {
+  background-color: $tertiary;
+  transition: all 0.3s ease-in-out;
+}
+
+.categoryBadgeIcon {
+  max-width: 5rem;
+}
+
+.tagBadge {
+  background: $light;
+  font-size: 1.125rem;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: darken($tertiary, 8%);
+    color: $white;
+  }
+}
+
+.subscriptionBtn {
+  width: 100%;
+  @include media-breakpoint-up(sm) {
+    width: auto;
+  }
+}
+
+.subscriptionImg {
+  background: transparent url('@/assets/images/subscription.webp') center repeat;
+  background-size: cover;
+}
