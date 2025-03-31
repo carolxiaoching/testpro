@@ -254,6 +254,8 @@ async function getRecipe(id) {
   openLoading();
 
   try {
+    console.log('2. getRecipe id ', id);
+
     const res = await apiGetRecipe(id);
     recipe.value = res.data.data;
 
@@ -274,6 +276,8 @@ async function getRecipe(id) {
 // 取得關聯食譜資料
 async function getRelatedRecipes(category) {
   openLoading();
+
+  console.log('3. getRelatedRecipes category ', category);
 
   try {
     const res = await apiGetRecipes({ category });
@@ -296,7 +300,7 @@ onMounted(async () => {
     alertModalRef.value?.openModal();
     return;
   }
-  console.log('recipe-id ', id);
+  console.log('1. recipe-id ', id);
 
   if (!tags.value.length || !categories.value.length) {
     await getTagsAndCategories();

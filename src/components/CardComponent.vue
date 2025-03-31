@@ -55,6 +55,19 @@
 
 <script setup>
 import { getCategoryName, getTagName } from '@/scripts/methods.js';
+import { watch, ref } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+// 監聽 route.query 的變化，動態更新選單
+watch(
+  () => route,
+  async (r) => {
+    console.log('route ', r.fullPath);
+  },
+  { immediate: true } // 初始時也會執行一次
+);
 
 const props = defineProps({
   recipe: {
