@@ -44,7 +44,7 @@
           {{ getCategoryName(categories, recipe.category) }}
         </router-link>
         <h1 class="mb-11">{{ recipe.title }}</h1>
-        <ul class="list-unstyled mb-11" v-if="recipe._id">
+        <ul class="list-unstyled mb-11">
           <li class="mb-2">
             <i class="bi bi-person-fill me-4"></i>
             作者：
@@ -87,7 +87,7 @@
         <span class="me-6"> 食材 </span>
         <span class="fs-5 text-muted">({{ recipe.servings }} 人份)</span>
       </h2>
-      <ul class="row list-unstyled mb-0" v-if="recipe._id">
+      <ul class="row list-unstyled mb-0">
         <li
           class="col-12 col-sm-6"
           v-for="(ingredientItem, index) in recipe.ingredients"
@@ -154,7 +154,7 @@
         <span> 步驟 </span>
       </h2>
       <div class="step mx-auto">
-        <ul class="stepList list-unstyled position-relative m-0 p-0" v-if="recipe._id">
+        <ul class="stepList list-unstyled position-relative m-0 p-0">
           <li
             class="stepItem position-relative"
             v-for="(stepItem, index) in recipe.steps"
