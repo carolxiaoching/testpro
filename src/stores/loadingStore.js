@@ -8,6 +8,7 @@ export default defineStore('loadingStore', () => {
     console.log('openLoading from ', from);
 
     isLoading.value = true;
+    console.log('問題 isLoading');
   }
 
   // 關閉 Loading
