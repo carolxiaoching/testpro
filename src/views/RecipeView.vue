@@ -304,11 +304,16 @@ async function getData(id) {
     const resRecipe = await apiGetRecipe(id);
     recipe.value = resRecipe.data.data;
 
+    const a = recipe.value.category;
+    console.log('apiGetRecipe 單一食譜成功, category 是 ', a);
+
     // 並行請求關聯食譜資料
-    const resRecipes = await Promise.all([apiGetRecipes({ category: recipe.value.category })]);
+    const resRecipes = await Promise.all([apiGetRecipes({ category: a })]);
 
     // 設定關聯食譜資料
     recipes.value = resRecipes.data.data.results;
+
+    console.log('apiGetRecipes 關聯食譜成功');
 
     closeLoading('getRecipe');
   } catch (err) {
@@ -317,7 +322,7 @@ async function getData(id) {
       title: '載入失敗',
       text: err.response?.data?.message || '食譜載入失敗，請重整網頁',
     });
-    closeLoading('err getRecipe');
+    closeLoading('err getRecipe', err);
     router.push('/recipes');
   }
 }
