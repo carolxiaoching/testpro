@@ -293,6 +293,7 @@ function closeAlertModal() {
 
 // 取得食譜列表
 async function getRecipes() {
+  console.log('open - getRecipes home');
   openLoading();
   try {
     const [hotRecipesRes, recentRecipesRes, recommendRecipesRes] = await Promise.all([
@@ -306,7 +307,7 @@ async function getRecipes() {
     recentRecipes.value = recentRecipesRes.data.data.results;
     recommendRecipes.value = recommendRecipesRes.data.data.results;
 
-    console.log('getRecipes home');
+    console.log('close - getRecipes home');
     closeLoading();
   } catch (err) {
     pushMessage({
@@ -321,7 +322,7 @@ async function getRecipes() {
 onMounted(async () => {
   if (!tags.value.length || !categories.value.length) {
     await getTagsAndCategories();
-    console.log('getTagsAndCategories home');
+    console.log('getTagsAndCategories home back');
   }
 
   getRecipes();

@@ -11,6 +11,7 @@ export default defineStore('tagAndCategoryStore', () => {
 
   // 取得分類與標籤
   async function getTagsAndCategories() {
+    console.log('open - getTagsAndCategories pinia');
     loading.openLoading();
     try {
       const tagsRes = await apiGetTags();
@@ -18,7 +19,7 @@ export default defineStore('tagAndCategoryStore', () => {
       tags.value = tagsRes.data.data;
       categories.value = categoriesRes.data.data;
 
-      console.log('getTagsAndCategories pinia');
+      console.log('close - getTagsAndCategories pinia');
       loading.closeLoading();
     } catch (err) {
       message.pushMessage({
