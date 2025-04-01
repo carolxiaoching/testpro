@@ -87,7 +87,7 @@
         <span class="me-6"> 食材 </span>
         <span class="fs-5 text-muted">({{ recipe.servings }} 人份)</span>
       </h2>
-      <ul class="row list-unstyled mb-0">
+      <ul class="row list-unstyled mb-0" v-if="recipe._id">
         <li
           class="col-12 col-sm-6"
           v-for="(ingredientItem, index) in recipe.ingredients"
@@ -154,7 +154,7 @@
         <span> 步驟 </span>
       </h2>
       <div class="step mx-auto">
-        <ul class="stepList list-unstyled position-relative m-0 p-0">
+        <ul class="stepList list-unstyled position-relative m-0 p-0" v-if="recipe._id">
           <li
             class="stepItem position-relative"
             v-for="(stepItem, index) in recipe.steps"
