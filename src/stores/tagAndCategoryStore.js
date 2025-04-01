@@ -18,6 +18,7 @@ export default defineStore('tagAndCategoryStore', () => {
       tags.value = tagsRes.data.data;
       categories.value = categoriesRes.data.data;
 
+      console.log('getTagsAndCategories pinia');
       loading.closeLoading();
     } catch (err) {
       message.pushMessage({

@@ -183,6 +183,8 @@ defineEmits(['update-step']);
 watch(
   props,
   (newProps) => {
+    console.log('a');
+
     tempRecipeData.value = newProps.tempRecipe;
   },
   { immediate: true, deep: true }
@@ -190,7 +192,7 @@ watch(
 
 // 新增/更新 食譜
 async function updateRecipe() {
-  props.tempRecipe.steps.forEach((item, index) => {
+  tempRecipeData.value.steps.forEach((item, index) => {
     item.stepOrder = index + 1;
   });
 
@@ -207,12 +209,16 @@ async function updateRecipe() {
     msg = '更新';
   }
 
+  console.log(tempRecipeData.value);
+
   try {
     openLoading();
-    await apiMethods[active](props.tempRecipe, id);
+    await apiMethods[active](tempRecipeData.value, id);
     alertModalRef.value?.openModal();
     closeLoading();
   } catch (err) {
+    console.log(err);
+
     pushMessage({
       style: 'danger',
       title: `${msg}失敗`,

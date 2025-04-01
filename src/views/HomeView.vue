@@ -306,6 +306,7 @@ async function getRecipes() {
     recentRecipes.value = recentRecipesRes.data.data.results;
     recommendRecipes.value = recommendRecipesRes.data.data.results;
 
+    console.log('getRecipes home');
     closeLoading();
   } catch (err) {
     pushMessage({
@@ -320,6 +321,7 @@ async function getRecipes() {
 onMounted(async () => {
   if (!tags.value.length || !categories.value.length) {
     await getTagsAndCategories();
+    console.log('getTagsAndCategories home');
   }
 
   getRecipes();
