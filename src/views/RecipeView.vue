@@ -251,6 +251,7 @@ function closeAlertModal() {
 
 // 取得食譜資料
 async function getRecipe(id) {
+  console.log('open - getRecipe');
   openLoading();
 
   try {
@@ -259,6 +260,7 @@ async function getRecipe(id) {
 
     await getRelatedRecipes(recipe.value.category);
 
+    console.log('close - getRecipe');
     closeLoading();
   } catch (err) {
     pushMessage({
@@ -266,6 +268,7 @@ async function getRecipe(id) {
       title: '載入失敗',
       text: err.response?.data?.message || '食譜載入失敗，請重整網頁',
     });
+    console.log('close err - getRecipe');
     closeLoading();
     router.push('/recipes');
   }
@@ -273,12 +276,13 @@ async function getRecipe(id) {
 
 // 取得關聯食譜資料
 async function getRelatedRecipes(category) {
+  console.log('open - getRelatedRecipes');
   openLoading();
 
   try {
     const res = await apiGetRecipes({ category });
     recipes.value = res.data.data.results;
-
+    console.log('close - getRelatedRecipes');
     closeLoading();
   } catch (err) {
     pushMessage({
@@ -286,6 +290,7 @@ async function getRelatedRecipes(category) {
       title: '載入失敗',
       text: err.response?.data?.message || '相關食譜載入失敗，請重整網頁',
     });
+    console.log('close err - getRelatedRecipes');
     closeLoading();
   }
 }
@@ -298,8 +303,11 @@ onMounted(async () => {
   }
 
   if (!tags.value.length || !categories.value.length) {
+    console.log('開啟 - getTagsAndCategories');
     await getTagsAndCategories();
+    console.log('關閉 - getTagsAndCategories');
   }
+  console.log('開啟 - getRecipe');
   await getRecipe(id);
 });
 </script>
