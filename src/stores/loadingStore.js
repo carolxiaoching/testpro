@@ -4,17 +4,12 @@ import { defineStore } from 'pinia';
 export default defineStore('loadingStore', () => {
   const isLoading = ref(false);
   // 開啟 Loading
-  function openLoading(from = '') {
-    console.log('openLoading from ', from);
-
+  function openLoading() {
     isLoading.value = true;
-    console.log('問題 isLoading');
   }
 
   // 關閉 Loading
-  function closeLoading(from) {
-    console.log('closeLoading from ', from);
-
+  function closeLoading() {
     isLoading.value = false;
   }
   return {

@@ -293,8 +293,7 @@ function closeAlertModal() {
 
 // 取得食譜列表
 async function getRecipes() {
-  console.log('open - getRecipes home');
-  openLoading('home');
+  openLoading();
   try {
     const [hotRecipesRes, recentRecipesRes, recommendRecipesRes] = await Promise.all([
       apiGetRecipes({ sort: 'hot' }), // 熱門食譜
@@ -307,22 +306,20 @@ async function getRecipes() {
     recentRecipes.value = recentRecipesRes.data.data.results;
     recommendRecipes.value = recommendRecipesRes.data.data.results;
 
-    console.log('close - getRecipes home');
-    closeLoading('home');
+    closeLoading();
   } catch (err) {
     pushMessage({
       style: 'danger',
       title: '取得食譜列表失敗',
       text: err.response?.data?.message || '請重整網頁再試一次',
     });
-    closeLoading('home');
+    closeLoading();
   }
 }
 
 onMounted(async () => {
   if (!tags.value.length || !categories.value.length) {
     await getTagsAndCategories();
-    console.log('getTagsAndCategories home back');
   }
 
   getRecipes();

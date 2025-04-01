@@ -249,102 +249,56 @@ function closeAlertModal() {
   router.push('/recipes');
 }
 
-// // 取得食譜資料
-// async function getRecipe(id) {
-//   console.log('open - getRecipe');
-//   openLoading('getRecipe');
-
-//   try {
-//     const res = await apiGetRecipe(id);
-//     recipe.value = res.data.data;
-
-//     await getRelatedRecipes(recipe.value.category);
-
-//     console.log('close - getRecipe');
-//     closeLoading('getRecipe');
-//   } catch (err) {
-//     pushMessage({
-//       style: 'danger',
-//       title: '載入失敗',
-//       text: err.response?.data?.message || '食譜載入失敗，請重整網頁',
-//     });
-//     console.log('close err - getRecipe');
-//     closeLoading('err getRecipe');
-//     router.push('/recipes');
-//   }
-// }
-
-// // 取得關聯食譜資料
-// async function getRelatedRecipes(category) {
-//   console.log('open - getRelatedRecipes');
-//   openLoading('getRecipe');
-
-//   try {
-//     const res = await apiGetRecipes({ category });
-//     recipes.value = res.data.data.results;
-//     console.log('close - getRelatedRecipes');
-//     closeLoading('getRecipe');
-//   } catch (err) {
-//     pushMessage({
-//       style: 'danger',
-//       title: '載入失敗',
-//       text: err.response?.data?.message || '相關食譜載入失敗，請重整網頁',
-//     });
-//     console.log('close err - getRelatedRecipes');
-//     closeLoading('err getRecipe');
-//   }
-// }
-
 // 取得食譜資料
-async function getData(id) {
-  openLoading('getRecipe');
-  console.log('問題 getRecipe');
+async function getRecipe(id) {
+  openLoading();
 
   try {
-    // 先取得主要食譜資料
-    const resRecipe = await apiGetRecipe(id);
-    recipe.value = resRecipe.data.data;
+    const res = await apiGetRecipe(id);
+    recipe.value = res.data.data;
 
-    const a = recipe.value.category;
-    console.log('apiGetRecipe 單一食譜成功, category 是 ', a);
+    await getRelatedRecipes(recipe.value.category);
 
-    // 並行請求關聯食譜資料
-    const resRecipes = await apiGetRecipes({ category: a });
-
-    console.log('resRecipes 結果 ', resRecipes);
-
-    // 設定關聯食譜資料
-    recipes.value = resRecipes.data.data.results;
-
-    console.log('apiGetRecipes 關聯食譜成功');
-
-    closeLoading('getRecipe');
+    closeLoading();
   } catch (err) {
     pushMessage({
       style: 'danger',
       title: '載入失敗',
       text: err.response?.data?.message || '食譜載入失敗，請重整網頁',
     });
-    closeLoading('err getRecipe', err);
+    closeLoading();
     router.push('/recipes');
+  }
+}
+
+// 取得關聯食譜資料
+async function getRelatedRecipes(category) {
+  openLoading();
+
+  try {
+    const res = await apiGetRecipes({ category });
+    recipes.value = res.data.data.results;
+
+    closeLoading();
+  } catch (err) {
+    pushMessage({
+      style: 'danger',
+      title: '載入失敗',
+      text: err.response?.data?.message || '相關食譜載入失敗，請重整網頁',
+    });
+    closeLoading();
   }
 }
 
 onMounted(async () => {
   const { id } = route.params;
-  if (!id) {
+  if (id) {
+    if (!tags.value.length || !categories.value.length) {
+      await getTagsAndCategories();
+    }
+    await getRecipe(id);
+  } else {
     alertModalRef.value?.openModal();
-    return;
   }
-
-  if (!tags.value.length || !categories.value.length) {
-    console.log('開啟 - getTagsAndCategories');
-    await getTagsAndCategories();
-    console.log('關閉 - getTagsAndCategories');
-  }
-
-  console.log('開啟 - getRecipe');
-  // await getRecipe(id);
-  await getData(id);
 });
 </script>
