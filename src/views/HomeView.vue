@@ -294,7 +294,7 @@ function closeAlertModal() {
 // 取得食譜列表
 async function getRecipes() {
   console.log('open - getRecipes home');
-  openLoading();
+  openLoading('home');
   try {
     const [hotRecipesRes, recentRecipesRes, recommendRecipesRes] = await Promise.all([
       apiGetRecipes({ sort: 'hot' }), // 熱門食譜
@@ -308,14 +308,14 @@ async function getRecipes() {
     recommendRecipes.value = recommendRecipesRes.data.data.results;
 
     console.log('close - getRecipes home');
-    closeLoading();
+    closeLoading('home');
   } catch (err) {
     pushMessage({
       style: 'danger',
       title: '取得食譜列表失敗',
       text: err.response?.data?.message || '請重整網頁再試一次',
     });
-    closeLoading();
+    closeLoading('home');
   }
 }
 
