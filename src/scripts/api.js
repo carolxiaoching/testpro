@@ -51,8 +51,20 @@ export const apiGetRecipes = ({
   keyword = '',
   tags = [],
   isRecommended,
-} = {}) =>
-  axios.get(`${api}/api/publicRecipes`, {
+} = {}) => {
+  const a = {
+    page,
+    perPage,
+    sort: sort ? sort : undefined,
+    category: category && category !== '全部' ? category : undefined,
+    keyword: keyword ? keyword : undefined,
+    tags: tags.length ? tags.join(',') : undefined,
+    isRecommended: isRecommended ?? undefined,
+  };
+
+  console.log(a);
+
+  return axios.get(`${api}/api/publicRecipes`, {
     params: {
       page,
       perPage,
@@ -63,6 +75,7 @@ export const apiGetRecipes = ({
       isRecommended: isRecommended ?? undefined,
     },
   });
+};
 
 export const apiGetUserRecipes = (
   userId,

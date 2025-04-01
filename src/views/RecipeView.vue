@@ -308,7 +308,9 @@ async function getData(id) {
     console.log('apiGetRecipe 單一食譜成功, category 是 ', a);
 
     // 並行請求關聯食譜資料
-    const resRecipes = await Promise.all([apiGetRecipes({ category: a })]);
+    const resRecipes = await apiGetRecipes({ category: a });
+
+    console.log('resRecipes 結果 ', resRecipes);
 
     // 設定關聯食譜資料
     recipes.value = resRecipes.data.data.results;
