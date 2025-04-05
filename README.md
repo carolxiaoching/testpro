@@ -24,6 +24,7 @@
 
 ![cover](https://imgur.com/x72Oiah.png)
 
+<!-- 空白行 -->
 
 ## 📒 專案簡介
 
@@ -31,9 +32,11 @@
 
 本專案除了專注於打造實用的食譜平台，也作為我學習 Vue3 與前後端整合的成果展示。
 
+<!-- 空白行 -->
 
 ## 🧑‍💻 關於開發動機與心得
 
+<!-- 空白行 -->
 
 ### 💭 為什麼會做這個網站？
 
@@ -41,6 +44,7 @@
 
 不管是剛入門的新手，還是經驗豐富的料理人，都能在這裡記錄靈感、分享成果，享受料理的樂趣與成就感。
 
+<!-- 空白行 -->
 
 ### 🙌 我的學習與成長
 
@@ -55,7 +59,7 @@
 
 希望這份作品除了展現技術實力，也傳遞出我對料理創作的溫度與熱情
 
-
+<!-- 空白行 -->
 
 ## ✨ 主要功能
 
@@ -65,7 +69,7 @@
 - 🙋‍♀️ 會員功能（可編輯個人資料、頭像、修改密碼）
 - 🔐 忘記密碼時，可透過系統發送的驗證 Email 重設密碼
 
-
+<!-- 空白行 -->
 
 ## 💡 特色
 
@@ -76,6 +80,7 @@
 - 🔄 加載動畫效果（Vue-Loading-Overlay）
 - 📱 RWD 響應式設計 + Bootstrap Icons
 
+<!-- 空白行 -->
 
 ## 🛠️ 使用技術
 
@@ -93,7 +98,7 @@
 | 格式工具 | [Prettier](https://prettier.io/)、[ESLint](https://eslint.org/)                              |
 | 部署     | [gh-pages](https://github.com/tschaub/gh-pages)                                              |
 
-
+<!-- 空白行 -->
 
 ## 📦 安裝與執行
 
@@ -115,6 +120,7 @@ npm run build
 npm run deploy
 ```
 
+<!-- 空白行 -->
 
 ## 🔐 使用者權限概覽
 
@@ -128,10 +134,11 @@ npm run deploy
 | 編輯食譜、會員設定          | ❌                    | ✅                                |
 | 會員頁面                    | ✅ （僅查看公開食譜） | ✅ （可查看本人的私人食譜與收藏） |
 
-
+<!-- 空白行 -->
 
 ## 📸 頁面展示
 
+<!-- 空白行 -->
 
 ### 🏠 首頁
 
@@ -139,42 +146,42 @@ npm run deploy
 
 ![首頁](https://imgur.com/0dcfzug.png)
 
-
+<!-- 空白行 -->
 ### 📖 食譜列表
 
 - 支援多種搜尋方式，收藏、分頁等功能
 
 ![食譜列表](https://i.imgur.com/F2aiah1.png)
 
-
+<!-- 空白行 -->
 ### 🍽️ 食譜詳細頁
 
 - 食譜完整內容、相關推薦食譜
 
 ![食譜詳細頁](https://imgur.com/DAQCisW.png)
 
-
+<!-- 空白行 -->
 ### ✏️ 編輯食譜頁面
 
 - 可新增 / 編輯食譜，支援拖曳食材與步驟排序，可自行選擇分類與標籤
 
 ![編輯食譜頁面](https://imgur.com/fQNXGqQ.png)
 
-
+<!-- 空白行 -->
 ### 👤 會員頁面
 
 - 會員資料與公開食譜一覽 (若為會員本人頁面，則選單可查看本人的私人食譜、收藏食譜)
 
 ![會員頁面](https://imgur.com/HwbrtcB.png)
 
-
+<!-- 空白行 -->
 ### 🔧 會員設定
 
 - 修改個人資訊、變更密碼、上傳頭像
 
 ![會員設定](https://imgur.com/L037vRT.png)
 
-
+<!-- 空白行 -->
 ### ❓ QA 與 📞 聯絡我們
 
 - 常見問題、隱私權政策、服務條款
@@ -185,14 +192,14 @@ npm run deploy
 
 ![聯絡我們](https://imgur.com/bnlmQiJ.png)
 
-
+<!-- 空白行 -->
 ### ℹ️ 關於我們
 
 - 網站願景、誕生背景與里程碑故事
 
 ![關於我們](https://imgur.com/X3VWh2Z.png)
 
-
+<!-- 空白行 -->
 ### 🔐 註冊 / 登入 / 重設密碼
 
 - 註冊與登入
@@ -203,7 +210,7 @@ npm run deploy
 
 ![忘記密碼與重設密碼頁面](https://imgur.com/YnlHzSU.png)
 
-
+<!-- 空白行 -->
 ## 📁 專案結構
 
 | 專案     | 連結                                                                                                                                        |
@@ -212,6 +219,7 @@ npm run deploy
 | 前端後台 | [GitHub Repo](https://github.com/carolxiaoching/msc-admin-frontend) 🌞 [Demo](https://carolxiaoching.github.io/msc-admin-frontend/#/signin) |
 | 後端     | [GitHub Repo](https://github.com/carolxiaoching/msc-backend)                                                                                |
 
+<!-- 空白行 -->
 
 ## 📷 圖片來源
 
@@ -219,6 +227,7 @@ npm run deploy
 - [pixabay](https://pixabay.com/zh/)
 - [unsplash](https://unsplash.com/)
 
+<!-- 空白行 -->
 
 ## 📌 備註
 
