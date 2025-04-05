@@ -120,7 +120,14 @@ npm run deploy
 
 推薦食譜輪播、網站特色介紹、分類、標籤、熱門與最新食譜展示、訂閱電子報
 
-![首頁](https://i.imgur.com/TVgQ3Fy.gif)
+- gifv
+  [首頁](https://i.imgur.com/TVgQ3Fy.gifv)
+
+- gif
+  [首頁](https://i.imgur.com/TVgQ3Fy.gif)
+
+- gif!
+  ![首頁](https://i.imgur.com/TVgQ3Fy.gif)
 
 ### 📖 食譜列表
 
