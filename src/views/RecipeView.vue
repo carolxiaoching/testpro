@@ -15,11 +15,12 @@
         </ol>
       </nav>
     </div>
-    <div class="col-12 col-md-6 col-xl-7 mb-11 mb-md-16" v-if="recipe.coverImgUrl">
+    <div class="col-12 col-md-6 col-xl-7 mb-11 mb-md-16">
       <div
         class="recipeCover backgroundCover w-100 h-100 rounded-2"
         :style="{ backgroundImage: `url(${recipe.coverImgUrl})` }"
         :alt="recipe.title"
+        v-if="recipe.coverImgUrl"
       ></div>
     </div>
     <div class="col-12 col-md-6 col-xl-5 mb-16">
