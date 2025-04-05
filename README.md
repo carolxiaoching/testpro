@@ -12,7 +12,10 @@
 
 <p align="center">
   👉 查看
-  [Demo](https://carolxiaoching.github.io/msc-user-frontend/#/){:target="_blank"}
+  [Demo](https://carolxiaoching.github.io/msc-user-frontend/#/){:target="\_blank" rel="noopener"}
+
+[Demo](https://carolxiaoching.github.io/msc-user-frontend/#/){:target="\_blank" rel="noopener"}
+
 </p>
 
 <p align="center">
