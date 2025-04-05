@@ -129,6 +129,15 @@ npm run deploy
 - gif!
   ![首頁](https://i.imgur.com/TVgQ3Fy.gif)
 
+- gifv!
+  ![首頁](https://i.imgur.com/TVgQ3Fy.gifv)
+
+- gif row
+  [首頁](https://raw.githubusercontent.com/carolxiaoching/testpro/refs/heads/main/public/images/home-preview.gif)
+
+- gif row!
+  ![首頁](https://raw.githubusercontent.com/carolxiaoching/testpro/refs/heads/main/public/images/home-preview.gif)
+
 ### 📖 食譜列表
 
 支援多種搜尋方式，收藏、分頁等功能
