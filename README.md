@@ -11,8 +11,8 @@
 </p>
 
 <p align="center">
-  </a>
-  👉 查看  [Demo](https://carolxiaoching.github.io/msc-user-frontend/#/){:target="_blank"}
+  👉 查看
+  [Demo](https://carolxiaoching.github.io/msc-user-frontend/#/){:target="_blank"}
 </p>
 
 <p align="center">
