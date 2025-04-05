@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://carolxiaoching.github.io/msc-user-frontend/#/">
+  <a href="https://carolxiaoching.github.io/msc-user-frontend/#/" target="_blank" >
   👉 查看 Demo
   </a>
 </p>
@@ -21,6 +21,8 @@
   <img src="https://img.shields.io/badge/bootstrap_5-brightgreen?style=for-the-badge&logo=bootstrap&logoColor=white&color=7952B3">
   <img src="https://img.shields.io/badge/vite-brightgreen?style=for-the-badge&logo=vite&logoColor=white&color=646CFF">
 </p>
+
+![cover](https://imgur.com/x72Oiah.png)
 
 ## 📒 專案簡介
 
@@ -118,65 +120,65 @@ npm run deploy
 
 ### 🏠 首頁
 
-推薦食譜輪播、網站特色介紹、分類、標籤、熱門與最新食譜展示、訂閱電子報
+推薦食譜輪播、網站特色介紹、分類、標籤、熱門與最新食譜展示、
 
-![首頁](https://i.postimg.cc/tsqZc079/home1.gif)
+![首頁](https://imgur.com/0dcfzug.png)
 
 ### 📖 食譜列表
 
 支援多種搜尋方式，收藏、分頁等功能
 
-![食譜列表](https://i.postimg.cc/BZYczmpb/recipes.png)
+![食譜列表](https://i.imgur.com/F2aiah1.png)
 
 ### 🍽️ 食譜詳細頁
 
 食譜完整內容、相關推薦食譜
 
-![食譜詳細頁](https://i.postimg.cc/CKGs6Yrp/recipe.png)
+![食譜詳細頁](https://imgur.com/DAQCisW.png)
 
 ### ✏️ 編輯食譜頁面
 
 可新增 / 編輯食譜，支援拖曳食材與步驟排序，可自行選擇分類與標籤
 
-![編輯食譜頁面](https://i.postimg.cc/nznYy5Nj/recipeedit.png)
+![編輯食譜頁面](https://imgur.com/fQNXGqQ.png)
 
 ### 👤 會員頁面
 
 會員資料與公開食譜一覽 (若為會員本人頁面，則選單可查看本人的私人食譜、收藏食譜)
 
-![會員頁面](https://i.postimg.cc/1RJJQmm9/collects.png)
+![會員頁面](https://imgur.com/HwbrtcB.png)
 
 ### 🔧 會員設定
 
 修改個人資訊、變更密碼、上傳頭像
 
-![會員設定](https://i.postimg.cc/wMv5vNq9/setting.png)
+![會員設定](https://imgur.com/L037vRT.png)
 
 ### ❓ QA 與 📞 聯絡我們
 
 常見問題、隱私權政策、服務條款
 
-![QA 頁面](https://i.postimg.cc/9QqpZyGM/qa.png)
+![QA 頁面](https://imgur.com/e32O2tZ.png)
 
 秘密食譜聯絡資料展示，留言表單驗證
 
-![聯絡我們](https://i.postimg.cc/908ptp84/contact.png)
+![聯絡我們](https://imgur.com/bnlmQiJ.png)
 
 ### ℹ️ 關於我們
 
 網站願景、誕生背景與里程碑故事
 
-![關於我們](https://i.postimg.cc/tCJDRKJF/about.png)
+![關於我們](https://imgur.com/X3VWh2Z.png)
 
 ### 🔐 註冊 / 登入 / 重設密碼
 
 註冊與登入
 
-![註冊與登入頁面](https://i.postimg.cc/ZnKHdgct/1.png)
+![註冊與登入頁面](https://imgur.com/EFd7kjX.png)
 
 若忘記密碼，輸入 Email 後系統會寄送驗證信件，會員可透過信中連結重設新密碼
 
-![忘記密碼與重設密碼頁面](https://i.postimg.cc/76NXbDSn/2.png)
+![忘記密碼與重設密碼頁面](https://imgur.com/YnlHzSU.png)
 
 ## 📁 專案結構
 
